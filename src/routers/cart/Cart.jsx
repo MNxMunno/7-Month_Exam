@@ -22,7 +22,7 @@ const Cart = () => {
     .toFixed(2);
 
   const card = data?.map((el) => (
-    <div className="card" key={el.id}>
+    <div className="card cardd" key={el.id}>
       <button onClick={() => dispatch(removeFromCart(el.id))}>
         <TiDeleteOutline style={{ color: "red", fontSize: "32px" }} />
       </button>

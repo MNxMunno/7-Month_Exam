@@ -7,6 +7,7 @@
       display: grid;
       grid-template-columns: 0.2fr 0.3fr 1.7fr;
       gap: 32px;
+      flex-wrap: wrap;
       img {
         height: 94px;
         width: 137px;
@@ -53,12 +54,14 @@
     gap: 20px;
     justify-content: space-between;
     flex-wrap: wrap;
+
     .card {
       width: 375px;
       display: flex;
       //   align-items: flex-start;
       //   justify-content: space-between;
       gap: 20px;
+      //   flex-wrap: wrap;
       flex-direction: column;
       .coupon {
         display: flex;
@@ -100,6 +103,19 @@
         color: #fff;
         padding: 16px;
         border-radius: 12px;
+      }
+    }
+  }
+  @media only screen and (max-width: 747px) {
+    .cards {
+      .card {
+        display: flex;
+        flex-wrap: wrap;
+        .content {
+          gap: 15px;
+          display: flex;
+          flex-wrap: wrap;
+        }
       }
     }
   }
