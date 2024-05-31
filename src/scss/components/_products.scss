@@ -1,0 +1,38 @@
+.product {
+  padding: 56px 0;
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    flex-direction: column;
+    .btn {
+      font-family: Poppins;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: underline;
+      padding-bottom: 5px;
+      color: #33a0ff;
+    }
+    .category__btns {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      overflow: auto;
+      padding: 30px;
+      li {
+        white-space: nowrap;
+        list-style: none;
+        data {
+          padding: 10px;
+          background: #ddd;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

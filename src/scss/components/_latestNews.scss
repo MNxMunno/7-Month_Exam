@@ -1,0 +1,66 @@
+.latest {
+  .content {
+    h1 {
+      font-family: Poppins;
+      font-size: 34px;
+      font-weight: 600;
+      line-height: 51px;
+      text-align: center;
+      color: #22262a;
+      text-transform: uppercase;
+    }
+    .cards {
+      padding: 71px 0 115px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      .card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        // flex-wrap: wrap;
+        h3 {
+          padding: 2px 0;
+        }
+        p {
+          max-width: 197px;
+          font-family: Proxima Nova;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 21.92px;
+          text-align: left;
+        }
+        img {
+          max-width: 153px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 1111px) {
+    .content {
+      .cards {
+        // flex-wrap: wrap;
+        // gap: 20px;
+
+        .card {
+          flex-wrap: wrap;
+          gap: 24px;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 700px) {
+    .content {
+      .cards {
+        flex-wrap: wrap;
+        gap: 20px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.info {
+  padding: 97px 0 121px;
+  .cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    .card {
+      width: 197px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      flex-direction: column;
+      h3 {
+        font-family: Poppins;
+        font-size: 27px;
+        font-weight: 500;
+        line-height: 40.5px;
+        text-align: left;
+        color: #22262a;
+        padding: 53px 0 11px;
+      }
+      P {
+        font-family: Proxima Nova;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.92px;
+        text-align: center;
+        color: #22262a;
+      }
+      img {
+        max-width: 100px;
+        height: 65px;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  @media only screen and (max-width: 686px) {
+    .cards {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}

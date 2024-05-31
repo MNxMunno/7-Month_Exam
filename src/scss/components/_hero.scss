@@ -1,0 +1,45 @@
+.hero {
+  padding: 258px 0 165px;
+  background-image: url("../assets/images/hero_img.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  .content {
+    h1 {
+      font-family: Poppins;
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 96px;
+      letter-spacing: 0.5px;
+      text-align: left;
+      color: #fff;
+      max-width: 573px;
+    }
+    .cards {
+      max-width: 1250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+
+      .card {
+        max-width: 417px;
+        height: 200px;
+        .img {
+          max-width: 417px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 787px) {
+    & {
+      padding: 100px 0 50px;
+      .content {
+        h1 {
+          font-size: 40px;
+          line-height: 64px;
+        }
+      }
+    }
+  }
+}

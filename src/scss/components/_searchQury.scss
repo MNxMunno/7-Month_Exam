@@ -1,0 +1,64 @@
+.searchQury {
+  padding: 127px 0 95px;
+  form {
+    width: 75%;
+    height: 62px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+
+    input {
+      outline: none;
+      width: 100%;
+      height: 100%;
+      text-indent: 12px;
+      font-family: Proxima Nova;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 21.92px;
+      text-align: left;
+      color: #262626;
+      border: 1px solid #bcddfe;
+      border-radius: 8px 0 0 8px;
+    }
+    button {
+      font-family: Poppins;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 30px;
+      text-align: left;
+      color: #fff;
+      background: #40bfff;
+      padding: 16px 27px;
+      border-radius: 0px 8px 8px 0;
+      transition: 0.3s;
+      &:hover {
+        background: #2b8cbc;
+      }
+      &:active {
+        background: #40bfff;
+      }
+    }
+  }
+  @media only screen and (max-width: 656px) {
+    & {
+      padding: 40px 0 50px;
+      form {
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+        input {
+          border-radius: 8px;
+          height: 100%;
+          padding: 17px;
+        }
+        button {
+          width: 100%;
+          border-radius: 8px;
+          text-align: center;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}

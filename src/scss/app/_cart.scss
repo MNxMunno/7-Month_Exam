@@ -1,0 +1,105 @@
+.shopCart {
+  .cards {
+    padding-bottom: 30px;
+    .card {
+      border-top: 2px solid #dddddd62;
+      padding: 20px 0;
+      display: grid;
+      grid-template-columns: 0.2fr 0.3fr 1.7fr;
+      gap: 32px;
+      img {
+        height: 94px;
+        width: 137px;
+        object-fit: contain;
+      }
+      .content {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 0.1fr 0.3fr 0.1fr;
+        flex-wrap: wrap;
+        h3 {
+          font-family: Poppins;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 27px;
+          text-align: left;
+          color: #262626;
+        }
+        .quant {
+          color: #33a0ff;
+        }
+        .btns {
+          width: 115px;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          background: #f6f7f8;
+          padding: 12px 19px;
+          margin: auto;
+          button {
+            color: #33a0ff;
+            font-family: sans-serif;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+  .total__cards {
+    border-top: 2px solid #dddddd62;
+    padding: 56px 0;
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    justify-content: space-between;
+    .card {
+      width: 375px;
+      display: flex;
+      //   align-items: flex-start;
+      //   justify-content: space-between;
+      gap: 20px;
+      flex-direction: column;
+      .coupon {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        justify-content: space-between;
+
+        h4 {
+          font-family: Poppins;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 27px;
+          text-align: left;
+          color: #262626;
+        }
+      }
+      .totalPrice {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        justify-content: space-between;
+        h3 {
+          font-family: Poppins;
+          font-size: 30px;
+          font-weight: 500;
+          line-height: 45px;
+          text-align: left;
+          color: #262626;
+        }
+      }
+      .check {
+        width: 100%;
+        background: #33a0ff;
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 27px;
+        text-align: center;
+        color: #fff;
+        padding: 16px;
+        border-radius: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@font-face {
+  font-family: Poppins;
+  src: url("../assets//fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: Proxima Nova;
+  src: url("../assets//fonts/Mark\ Simonson\ \ Proxima\ Nova\ Regular.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1300px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+}
+
+@import "./app/admin";
+@import "./app/cart";
+@import "./app/contact";
+@import "./app/detail";
+@import "./app/home";
+@import "./app/login";
+@import "./app/wishlist";
+@import "./components/banner";
+@import "./components/detailWrapper";
+@import "./components/footer";
+@import "./components/header";
+@import "./components/hero";
+@import "./components/payment";
+@import "./components/products";
+@import "./components/info";
+@import "./components/latestNews";
+@import "./components/feature";
+@import "./components/searchQury";
+@import "./components/card";
