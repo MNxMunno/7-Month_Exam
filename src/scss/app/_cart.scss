@@ -30,12 +30,12 @@
           color: #33a0ff;
         }
         .btns {
-          width: 115px;
+          width: 100px;
           display: flex;
           align-items: center;
           gap: 20px;
           background: #f6f7f8;
-          padding: 12px 19px;
+          padding: 12px;
           margin: auto;
           button {
             color: #33a0ff;
@@ -115,6 +115,8 @@
           gap: 15px;
           display: flex;
           flex-wrap: wrap;
+          justify-content: start;
+          align-items: baseline;
         }
       }
     }
