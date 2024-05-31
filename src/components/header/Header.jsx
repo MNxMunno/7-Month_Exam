@@ -59,7 +59,7 @@ const Header = () => {
               </Link>
               <p> Items</p>
               <b>$ {totalPrice}</b>
-              <button>
+              <button className="search">
                 <FaSearch />
               </button>
             </div>

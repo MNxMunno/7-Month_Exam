@@ -45,6 +45,35 @@
       }
     }
   }
+  @media only screen and (max-width: 565px) {
+    .content {
+      position: relative;
+      .top__btns {
+        position: fixed;
+        background: #fff;
+        padding: 20px 10px;
+        justify-content: space-between;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        gap: 5px;
+        z-index: 100;
+        border-top: 2px solid #ddd;
+        border-radius: 16px 16px 0 0;
+        a {
+          svg {
+            font-size: 20px;
+          }
+        }
+        p {
+          display: none;
+        }
+        .search {
+          font-size: 20px;
+        }
+      }
+    }
+  }
 }
 .navbar {
   //   background: dodgerblue;

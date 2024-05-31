@@ -20,12 +20,13 @@
     .category__btns {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 5px;
+      flex-wrap: wrap;
       overflow: auto;
-      padding: 30px;
       li {
         white-space: nowrap;
         list-style: none;
+        padding: 10px;
         data {
           padding: 10px;
           background: #ddd;

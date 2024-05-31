@@ -12,7 +12,7 @@ const USER_ID = "6339437164";
 let initialState = {
   fname: "",
   lname: "",
-  tel: "",
+  mail: "",
   desc: "",
 };
 
@@ -28,7 +28,7 @@ const PaymentModel = ({ close }) => {
     let text = "Buyurtma %0A%0A";
     text += `Ismi:  ${data.fname} %0A%0A`;
     text += `Familya:  ${data.lname} %0A%0A`;
-    text += `Telefon:  ${data.tel} %0A%0A`;
+    text += `Email:  ${data.mail} %0A%0A`;
     text += `Izoh:  ${data.desc} %0A%0A`;
 
     carts?.forEach((product) => {
@@ -49,9 +49,13 @@ const PaymentModel = ({ close }) => {
     <section className="inputs">
       <div className="container">
         <div className="content">
-          <button onClick={close}>
+          <button
+            onClick={close}
+            style={{ position: "absolute", right: "20%", top: "20%" }}
+          >
             <MdOutlineClose style={{ color: "red", fontSize: "32px" }} />
           </button>
+          <h1>Make Payment</h1>
           <form onSubmit={handleSubmit} action="">
             <input
               required
@@ -74,7 +78,7 @@ const PaymentModel = ({ close }) => {
             <input
               required
               value={data.tel}
-              onChange={(e) => setData((p) => ({ ...p, tel: e.target.value }))}
+              onChange={(e) => setData((p) => ({ ...p, mail: e.target.value }))}
               type="email"
               placeholder="Email Address"
             />
