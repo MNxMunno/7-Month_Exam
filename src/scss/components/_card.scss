@@ -102,4 +102,33 @@
       }
     }
   }
+  @media only screen and (max-width: 464px) {
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .card {
+        max-width: 170px;
+        img {
+          width: calc(100px + 45px);
+        }
+        h3 {
+          font-size: 16px;
+        }
+        .detail__btns {
+          button {
+            width: 30px;
+            height: 30px;
+            padding: 5px;
+            svg {
+              color: #33a0ff;
+              font-size: 12px;
+            }
+          }
+        }
+        span {
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
 }
