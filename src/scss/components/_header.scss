@@ -48,6 +48,11 @@
   @media only screen and (max-width: 565px) {
     .content {
       position: relative;
+      // display: none;
+      padding: 0;
+      .items {
+        display: none;
+      }
       .top__btns {
         position: fixed;
         background: #fff;
