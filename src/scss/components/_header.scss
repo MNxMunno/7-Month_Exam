@@ -124,11 +124,46 @@
         }
       }
     }
+    .menu {
+      display: none;
+    }
   }
   @media only screen and (max-width: 666px) {
+    &.shrink {
+      // background: palevioletred;
+      box-shadow: 3px 3px 5px rgba(132, 132, 132, 0.2);
+      nav {
+        .nav__items {
+          &.show {
+            top: 50px;
+          }
+        }
+      }
+    }
     nav {
       .nav__items {
-        display: none;
+        position: absolute;
+        top: -700px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        opacity: 0.9;
+        z-index: 1;
+        gap: 15px;
+        padding: 10px;
+        flex-direction: column;
+        transition: 0.3s;
+
+        &.show {
+          top: 70px;
+        }
+      }
+      .menu {
+        display: block;
+        svg {
+          font-size: 28px;
+          font-weight: 600;
+        }
       }
     }
   }

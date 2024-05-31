@@ -11,8 +11,10 @@ import {
 import { FaRegHeart, FaRegUser, FaSearch } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { IoIosMenu } from "react-icons/io";
 
 const Header = () => {
+  const [toggel, setToggel] = useState(false);
   const [shrink, setShrink] = useState(false);
   const wishlist = useSelector((s) => s.wishlist.value);
   const cart = useSelector((s) => s.cart.value);
@@ -72,13 +74,16 @@ const Header = () => {
             <NavLink className="logo" to={"/"}>
               <img src={logo} width={140} height={40} alt="logo" />
             </NavLink>
-            <div className="nav__items">
+            <div className={`nav__items ${toggel ? "show" : ""}`}>
               <NavLink to={"/"}>Home</NavLink>
               <NavLink to={"/bags"}>Bags</NavLink>
               <NavLink to={"/snakers"}>Snakers</NavLink>
               <NavLink to={"/belt"}>Belt</NavLink>
               <NavLink to={"/contact"}>Contact</NavLink>
             </div>
+            <button className="menu" onClick={() => setToggel(!toggel)}>
+              <IoIosMenu />
+            </button>
           </nav>
         </div>
       </header>
