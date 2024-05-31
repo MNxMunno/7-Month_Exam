@@ -59,7 +59,10 @@ const DetailWrapper = () => {
           </div>
           <div className="cart">
             <h3>{data?.title}</h3>
-            <p className="star">⭐⭐⭐⭐⭐</p>
+            <p className="star">
+              ⭐⭐⭐⭐⭐ <b>0 reviews</b>{" "}
+              <b className="submit_text">Submit a review</b>
+            </p>
             <span className="price">
               $ {data?.price} <del>$ {data?.price * 1.25}</del> <b>24% Off</b>
             </span>
@@ -93,8 +96,9 @@ const DetailWrapper = () => {
             </div>
           </div>
           <div className="second_cart">
+            <h3>Best seller</h3>
             <img src={data?.image} alt="img" width={100} height={100} />
-            <p>⭐⭐⭐⭐⭐</p>{" "}
+            <p>⭐⭐⭐⭐⭐</p>
             <span>
               ${data?.price} <del>$ {data?.price * 1.5}</del>
             </span>

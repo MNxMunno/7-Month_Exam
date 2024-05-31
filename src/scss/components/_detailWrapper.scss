@@ -38,6 +38,13 @@
     .cart {
       h3 {
         max-width: 450px;
+        font-family: Poppins;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 36px;
+        text-align: left;
+
+        color: #22262a;
       }
       .price {
         display: flex;
@@ -71,6 +78,18 @@
       }
       .star {
         padding: 26px 0 21px;
+        b {
+          font-family: Proxima Nova;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 19.49px;
+          text-align: left;
+          color: #c1c8ce;
+          padding-left: 12px;
+        }
+        .submit_text {
+          color: #33a0ff;
+        }
       }
       .info_detail {
         padding: 25px 0;
@@ -80,6 +99,10 @@
         flex-direction: column;
         border-bottom: 2px solid #acacac53;
         span {
+          width: 270px;
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
           font-family: Poppins;
           font-size: 16px;
           font-weight: 500;
@@ -99,6 +122,57 @@
       }
       .color {
         padding-top: 22px;
+      }
+    }
+    .second_cart {
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 12px;
+
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 16px;
+      flex-direction: column;
+
+      h3 {
+        font-family: Proxima Nova;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.92px;
+        text-align: left;
+        color: #c1c8ce;
+        padding-bottom: 34px;
+      }
+
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+      p {
+        padding: 52px 0 23px;
+        text-align: center;
+        padding-left: 30%;
+      }
+      span {
+        padding-left: 30%;
+        font-family: Proxima Nova;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.49px;
+        text-align: center;
+        color: #fb7181;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        del {
+          font-family: Proxima Nova;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 19.49px;
+          text-align: center;
+          color: #c1c8ce;
+        }
       }
     }
   }
