@@ -40,7 +40,7 @@ const Cart = ({ data }) => {
       <h3 title={el.title}>{el.title}</h3>
       <p className="stars">⭐⭐⭐⭐⭐</p>
       <span>
-        $ {el.price} <del>{el.price * 1.5}</del> <b>24% Off</b>
+        $ {el.price} <del>{el.price * 1.25}</del> <b>24% Off</b>
       </span>
     </div>
   ));

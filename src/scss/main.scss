@@ -13,6 +13,10 @@
   box-sizing: border-box;
 }
 
+body {
+  position: relative;
+}
+
 .container {
   max-width: 1300px;
   padding: 0 20px;

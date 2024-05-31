@@ -1,9 +1,103 @@
 .detailWrapper {
-  padding: 100px 0;
   .cards {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
     .card {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      flex-direction: column;
+      img {
+        max-width: 375px;
+        width: 100%;
+        height: 271px;
+        object-fit: contain;
+      }
+      .img__content {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        .imgg {
+          transition: 0.3s;
+          width: 85px;
+          height: 85px;
+          padding: 5px;
+        }
+      }
+
+      .imgg:hover {
+        border: 1px solid #03a9f4;
+      }
+    }
+    .cart {
+      h3 {
+        max-width: 450px;
+      }
+      .price {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 32.4px;
+        letter-spacing: 0.5px;
+        text-align: left;
+        color: #33a0ff;
+        del {
+          font-family: Poppins;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 21px;
+          letter-spacing: 0.5px;
+          text-align: left;
+          color: #9098b1;
+        }
+        b {
+          font-family: Poppins;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 21px;
+          letter-spacing: 0.5px;
+          text-align: left;
+          color: #fb7181;
+        }
+      }
+      .star {
+        padding: 26px 0 21px;
+      }
+      .info_detail {
+        padding: 25px 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        flex-direction: column;
+        border-bottom: 2px solid #acacac53;
+        span {
+          font-family: Poppins;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 21px;
+          text-align: left;
+          color: #262626;
+          b {
+            font-family: Poppins;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 21px;
+            text-align: left;
+            color: #262626;
+            text-transform: capitalize;
+          }
+        }
+      }
+      .color {
+        padding-top: 22px;
+      }
     }
   }
 }

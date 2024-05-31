@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addToCart,
@@ -9,9 +9,13 @@ import { TiDeleteOutline } from "react-icons/ti";
 import PaymentModel from "../../components/payment-model/PaymentModel";
 
 const Cart = () => {
+  const [model, setModel] = useState(false);
   const data = useSelector((s) => s.cart.value);
-
   const dispatch = useDispatch();
+
+  const openPayment = () => {
+    setModel(true);
+  };
 
   let totalPrice = data
     ?.reduce((acc, el) => acc + el.price * el.quantity, 0)
@@ -42,9 +46,12 @@ const Cart = () => {
       </div>
     </div>
   ));
+  const closePayment = () => {
+    setModel(false);
+  };
   return (
     <section className="shopCart">
-      <PaymentModel />
+      {model ? <PaymentModel close={closePayment} /> : <> </>}
       <div className="container">
         <div className="cards">{card}</div>
         <div className="total">
@@ -72,7 +79,9 @@ const Cart = () => {
                 <h3>Total</h3>
                 <h3>$ {totalPrice}</h3>
               </div>
-              <button className="check">Check out</button>
+              <button onClick={openPayment} className="check">
+                Check out
+              </button>
             </div>
           </div>
         </div>

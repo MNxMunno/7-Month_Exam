@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteAllCart } from "../../context/slice/cartSlice";
+import { MdOutlineClose } from "react-icons/md";
 const BOT_TOKEN = "7170154053:AAH2GUqkkxH_hbnj5L0juncFcn-qeiJDozk";
 const CHAT_ID = "-1002016436113";
 const USER_ID = "6339437164";
@@ -15,7 +16,7 @@ let initialState = {
   desc: "",
 };
 
-const PaymentModel = () => {
+const PaymentModel = ({ close }) => {
   const carts = useSelector((s) => s.cart.value);
   console.log(carts);
   const dispatch = useDispatch();
@@ -42,12 +43,15 @@ const PaymentModel = () => {
     setData(initialState);
 
     dispatch(deleteAllCart());
+    dispatch(close());
   };
   return (
     <section className="inputs">
       <div className="container">
         <div className="content">
-          <h2>Checkout</h2>
+          <button onClick={close}>
+            <MdOutlineClose style={{ color: "red", fontSize: "32px" }} />
+          </button>
           <form onSubmit={handleSubmit} action="">
             <input
               required
@@ -56,7 +60,7 @@ const PaymentModel = () => {
                 setData((p) => ({ ...p, fname: e.target.value }))
               }
               type="text"
-              placeholder="fname"
+              placeholder="First Name"
             />
             <input
               required
@@ -65,14 +69,14 @@ const PaymentModel = () => {
                 setData((p) => ({ ...p, lname: e.target.value }))
               }
               type="text"
-              placeholder="lname"
+              placeholder="Last Name"
             />
             <input
               required
               value={data.tel}
               onChange={(e) => setData((p) => ({ ...p, tel: e.target.value }))}
-              type="number"
-              placeholder="tel"
+              type="email"
+              placeholder="Email Address"
             />
             <textarea
               required
@@ -82,8 +86,9 @@ const PaymentModel = () => {
               id="text"
               rows="4"
               cols="40"
+              placeholder="Address for Delivery"
             ></textarea>
-            <button>Buy now</button>
+            <button>Go to Payment</button>
           </form>
         </div>
       </div>

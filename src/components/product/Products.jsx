@@ -16,10 +16,7 @@ const Products = () => {
     path: selectCategory,
   });
 
-  // const dispatch = useDispatch();
   const { data: category } = useGetCategoryQuery();
-
-  // console.log(dataa);
 
   return (
     <section className="product">
