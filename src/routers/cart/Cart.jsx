@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addToCart,
@@ -9,6 +9,9 @@ import { TiDeleteOutline } from "react-icons/ti";
 import PaymentModel from "../../components/payment-model/PaymentModel";
 
 const Cart = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [model, setModel] = useState(false);
   const data = useSelector((s) => s.cart.value);
   const dispatch = useDispatch();

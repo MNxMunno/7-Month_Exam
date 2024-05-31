@@ -18,7 +18,7 @@ const DetailWrapper = () => {
   const { id } = useParams();
   const { data, isLoading } = useGetDetailProductsQuery(id);
   const dispatch = useDispatch();
-  console.log(data);
+  // console.log(data);
 
   return (
     <section className="detailWrapper">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Banner from "../../components/banner/Banner";
 import FeatureProduct from "../../components/featureProduct/FeatureProduct";
 import Hero from "../../components/hero/Hero";
@@ -9,6 +9,9 @@ import SearchQury from "../../components/searchQuery/SearchQury";
 import { useGetProductsQuery } from "../../context/api/productApi";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <main>
       <Hero />
