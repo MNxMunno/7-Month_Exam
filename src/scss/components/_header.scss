@@ -6,6 +6,11 @@
     align-items: center;
     justify-content: space-between;
     gap: 32px;
+    select {
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+    }
     .top__btns {
       display: flex;
       align-items: center;
@@ -124,6 +129,7 @@
         }
       }
     }
+
     .menu {
       display: none;
     }

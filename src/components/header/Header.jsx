@@ -48,7 +48,7 @@ const Header = () => {
               </select>
             </div>
             <div className="top__btns">
-              <Link>
+              <Link to={"/login"}>
                 <FaRegUser />
               </Link>
               <Link to={"/wishlist"}>

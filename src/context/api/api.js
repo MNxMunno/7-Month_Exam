@@ -14,11 +14,11 @@ const baseQuery = fetchBaseQuery({
 });
 
 // Qayta urinish soni
-const baseQueryWithRetry = retry(baseQuery, { maxRetries: 1 });
+const baseQueryWithRetry = retry(baseQuery, { maxRetries: 0 });
 
 export const api = createApi({
   reducerPath: "mainApi",
   baseQuery: baseQueryWithRetry,
-  tagTypes: ["Product"], // O'zgarish bo'lganda qayta fetch qilish uchun Tag Typelar
+  tagTypes: ["Product", "User"], // O'zgarish bo'lganda qayta fetch qilish uchun Tag Typelar
   endpoints: () => ({}),
 });
