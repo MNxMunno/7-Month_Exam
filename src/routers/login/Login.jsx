@@ -1,16 +1,15 @@
 import React, { useState } from "react";
+import axios from "../../api/index";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import axios from "../../api/index";
 
 const Login = () => {
-  const [username, setUsername] = useState("jimmie_k");
   const [password, setPassword] = useState("klein*#%*");
+  const [username, setUsername] = useState("jimmie_k");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleLogin = async (event) => {
+  const handleLoginIn = async (event) => {
     event.preventDefault();
     setLoading(true);
 
@@ -28,35 +27,33 @@ const Login = () => {
   };
 
   return (
-    <>
-      <br />
-      <div className="siginIn Conteiner">
-        <form onSubmit={handleLogin}>
-          <label>Username</label>
-          <div className="single__int">
-            <input
-              type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </div>
-          <label>Password</label>
-          <div className="single__int">
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <div className="btnlar">
+    <section className="login">
+      <div className="container">
+        <div className="content">
+          <form onSubmit={handleLoginIn}>
+            <div className="form_item">
+              <label className="label">Username</label>
+              <input
+                type="text"
+                id="username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+            </div>
+            <div className="form_item">
+              <label className="label">Password</label>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+
             <button>LOGIN</button>
-            <button onClick={() => navigate("/")} id="back">
-              Back to Home
-            </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
-    </>
+    </section>
   );
 };
 

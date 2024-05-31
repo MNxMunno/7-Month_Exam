@@ -7,7 +7,7 @@ const Admin = () => {
 
   const handleLogout = () => {
     localStorage.clear();
-    navigate("/register");
+    navigate("/");
   };
 
   return (

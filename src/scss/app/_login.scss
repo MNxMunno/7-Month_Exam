@@ -1,0 +1,59 @@
+.login {
+  .content {
+    form {
+      padding: 117px 0 230px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      gap: 20px;
+      .form_item {
+        display: flex;
+        align-items: flex-start;
+        gap: 5px;
+        flex-direction: column;
+        .label {
+          font-family: Poppins;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 16.44px;
+          text-align: left;
+          color: #373737;
+        }
+        input {
+          width: 370px;
+          outline: none;
+          padding: 10px;
+          height: 40px;
+          transition: 0.2s;
+          border-radius: 8px;
+          border: 1px solid #dddddd;
+          font-size: 16px;
+          font-family: Poppins;
+          color: #373737;
+          &:focus {
+            border: 2px solid #33a0ff;
+          }
+        }
+      }
+      button {
+        width: 370px;
+        border-radius: 8px;
+        padding: 10px;
+        background: #33a0ff;
+        font-family: Poppins;
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 32.74px;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: #fff;
+        transition: 0.3s;
+        &:hover {
+          background: #1a85e2;
+        }
+      }
+    }
+  }
+}
