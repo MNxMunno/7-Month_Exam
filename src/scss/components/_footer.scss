@@ -8,6 +8,9 @@ footer {
       justify-content: space-between;
       gap: 20px;
       .footer__card {
+        img {
+          width: 100px;
+        }
         p {
           max-width: 221px;
           font-family: Proxima Nova;
