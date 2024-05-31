@@ -11,19 +11,19 @@ const Admin = () => {
   };
 
   return (
-    <>
-      <div className="admin__nav">
-        <Link to="/" className="admina">
-          Home
-        </Link>
-        <Link to="/Contact" className="admina">
-          Contact Us
-        </Link>
-      </div>
-      <div className="admin__container">
-        <h3 className="admin__h3">Admin panel</h3>
-        <div className="admin__text">
-          <p className="admin__p">
+    <section className="admin">
+      <div className="container">
+        {/* <div className="admin__nav">
+          <Link to="/" className="admina">
+            Home
+          </Link>
+          <Link to="/Contact" className="admina">
+            Contact Us
+          </Link>
+        </div> */}
+        <h2>Admin panel</h2>
+        <div className="cards">
+          <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Consequuntur cupiditate inventore, deserunt magnam provident dolores
             blanditiis ullam iusto! Assumenda dolor quis itaque commodi tempore
@@ -31,7 +31,7 @@ const Admin = () => {
             quam nulla ut. Odit quibusdam quis aut enim delectus blanditiis,
             quisquam quidem maiores suscipit. Dignissimos, ut repudiandae!
           </p>
-          <p className="admin__p">
+          <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Consequuntur cupiditate inventore, deserunt magnam provident dolores
             blanditiis ullam iusto! Assumenda dolor quis itaque commodi tempore
@@ -39,7 +39,7 @@ const Admin = () => {
             quam nulla ut. Odit quibusdam quis aut enim delectus blanditiis,
             quisquam quidem maiores suscipit. Dignissimos, ut repudiandae!
           </p>
-          <p className="admin__p">
+          <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Consequuntur cupiditate inventore, deserunt magnam provident dolores
             blanditiis ullam iusto! Assumenda dolor quis itaque commodi tempore
@@ -52,7 +52,7 @@ const Admin = () => {
           Log out
         </button>
       </div>
-    </>
+    </section>
   );
 };
 

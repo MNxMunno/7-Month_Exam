@@ -1,0 +1,45 @@
+.admin {
+  padding-bottom: 210px;
+  padding-top: 69px;
+  h2 {
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 60px;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+  .cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    flex-direction: column;
+    padding: 56px 0;
+    p {
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 28.8px;
+      letter-spacing: 0.5px;
+      text-align: left;
+    }
+  }
+  button {
+    width: 290px;
+    background: #33a0ff;
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 32.74px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #fff;
+    padding: 9px 21px;
+    border-radius: 8px;
+    transition: 0.3s;
+    &:hover {
+      background: #1f86df;
+    }
+  }
+}
