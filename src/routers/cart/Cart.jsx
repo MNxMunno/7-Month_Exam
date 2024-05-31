@@ -6,6 +6,7 @@ import {
   removeFromCart,
 } from "../../context/slice/cartSlice";
 import { TiDeleteOutline } from "react-icons/ti";
+import PaymentModel from "../../components/payment-model/PaymentModel";
 
 const Cart = () => {
   const data = useSelector((s) => s.cart.value);
@@ -43,6 +44,7 @@ const Cart = () => {
   ));
   return (
     <section className="shopCart">
+      <PaymentModel />
       <div className="container">
         <div className="cards">{card}</div>
         <div className="total">
