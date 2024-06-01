@@ -1,13 +1,45 @@
 .contact {
+  padding-bottom: 96px;
   .content {
     display: flex;
     align-items: flex-start;
+    height: 100vh;
+    padding-bottom: 96px;
+    .img {
+      width: 50%;
+      height: 100%;
+    }
     .form_contact {
       display: flex;
       align-items: flex-start;
       justify-content: center;
       flex-direction: column;
       gap: 12px;
+      .form_item {
+        display: flex;
+        align-items: flex-start;
+        gap: 5px;
+        flex-direction: column;
+        label {
+          font-family: Raleway;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 16.44px;
+          text-align: left;
+          color: #373737;
+        }
+        input {
+          height: 40px;
+          font-family: Raleway;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 18.78px;
+          text-align: left;
+          color: #969393;
+          outline: none;
+          padding: 10px;
+        }
+      }
     }
   }
   .search {
@@ -15,8 +47,7 @@
     height: 62px;
     display: flex;
     align-items: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
+
     margin: auto;
     input {
       outline: none;

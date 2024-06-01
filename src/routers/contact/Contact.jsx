@@ -1,6 +1,5 @@
 import React, { useState, memo } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 const BOT_TOKEN = "7170154053:AAH2GUqkkxH_hbnj5L0juncFcn-qeiJDozk";
 const CHAT_ID = "-1002016436113";
@@ -79,37 +78,42 @@ const Contact = () => {
           </div>
 
           <form className="from_contact" onSubmit={handleSubmit}>
-            <label>Fullname</label>
-            <input
-              type="text"
-              name="name"
-              placeholder="Full name"
-              value={contactData.name}
-              onChange={handleChange}
-              required
-            />
-            <label>Email</label>
-            <input
-              type="email"
-              name="email"
-              placeholder="john@example.com"
-              value={contactData.email}
-              onChange={handleChange}
-              required
-            />
-            <label>Message</label>
-            <textarea
-              name="message"
-              placeholder="Type your message"
-              value={contactData.message}
-              onChange={handleChange}
-              required
-            />
+            <div className="form_item">
+              <label>Fullname</label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Full name"
+                value={contactData.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form_item">
+              <label>Email</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="john@example.com"
+                value={contactData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form_item">
+              <label>Message</label>
+              <textarea
+                name="message"
+                placeholder="Type your message"
+                value={contactData.message}
+                onChange={handleChange}
+                required
+              />
+            </div>
             <button type="submit">Submit</button>
           </form>
         </div>
 
-        <ToastContainer />
         <form className="search">
           <input type="text" placeholder="Search query..." />
           <button>Search</button>
