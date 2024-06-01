@@ -5,6 +5,7 @@ import React, { useEffect } from "react";
 import { useGetProductsQuery } from "../../context/api/productApi";
 import Cart from "../../components/cart/Cart";
 import Products from "../../components/product/Products";
+import Loading from "../../components/loading/Loading";
 
 const Detail = () => {
   // const carts = useSelector((s) => s.cart.value);
@@ -22,7 +23,7 @@ const Detail = () => {
   return (
     <section className="detail">
       <div className="container">
-        {isLoading ? "loading..." : <DetailWrapper data={data} />}
+        {isLoading ? <Loading /> : <DetailWrapper data={data} />}
         <div className="content">
           <h3>RELATED PRODUCTS</h3>
         </div>

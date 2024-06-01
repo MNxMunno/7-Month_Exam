@@ -1,12 +1,8 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../../context/slice/cartSlice";
-import { FaHeart, FaRegHeart } from "react-icons/fa";
-import { toggleHeart } from "../../context/slice/wishlist";
 import Cart from "../cart/Cart";
 import { useGetCategoryQuery } from "../../context/api/categoryApi";
 import { useGetProductsQuery } from "../../context/api/productApi";
-// import wishlist from "../../context/slice/wishlist";
+import Skeleton from "../skileton/Skeleton";
 
 const Products = () => {
   const [selectCategory, setSelectCategory] = useState("/");
@@ -29,6 +25,7 @@ const Products = () => {
                 All
               </data>
             </li>
+
             {category?.map((el) => (
               <li key={el}>
                 <data
@@ -41,7 +38,8 @@ const Products = () => {
             ))}
           </ul>
           {/* <Cart data={data} /> */}
-          {isLoading ? "loading..." : <Cart data={data} />}
+          {isLoading ? <Skeleton count={8} /> : <></>}
+          <Cart data={data} />
           <button onClick={() => setOffset((p) => p + 1)} className="btn">
             load more
           </button>
