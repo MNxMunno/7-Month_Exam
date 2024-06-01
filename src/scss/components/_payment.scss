@@ -6,6 +6,7 @@
   width: 100%;
   height: 100%;
   background: #ddddddeb;
+  background: #fff;
   .content {
     position: absolute;
     background: #dddddd68;
@@ -49,7 +50,6 @@
       gap: 10px;
       justify-content: center;
       flex-direction: column;
-      background: #fff;
 
       padding: 20px;
       button {
