@@ -2,7 +2,7 @@
   padding-bottom: 96px;
   .content {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     height: auto;
     gap: 32px;
     flex-wrap: wrap;
@@ -12,8 +12,9 @@
       align-items: flex-start;
       justify-content: flex-start;
       padding: 40px;
-      width: 40%;
+      width: 50%;
       height: 100%;
+      padding: 123px 66px 319px;
       .text {
         h3 {
           font-family: Poppins;
@@ -32,7 +33,7 @@
           text-align: left;
           color: #fff;
           & + p {
-            padding-top: 20px;
+            padding-top: 36px;
           }
         }
       }
@@ -54,6 +55,7 @@
           line-height: 16.44px;
           text-align: left;
           color: #373733;
+          padding: 20px 0 10px;
         }
         input {
           width: 270px;
@@ -66,11 +68,24 @@
           height: 40px;
           text-indent: 12px;
           outline: none;
+          transition: 0.3s;
+          border-radius: 8px;
+          border: 1px solid #ddd;
+          &:focus {
+            border: 2px solid #40bfff;
+          }
         }
         textarea {
           resize: none;
           padding: 10px;
           outline: none;
+          transition: 0.3s;
+
+          border-radius: 8px;
+          border: 1px solid #ddd;
+          &:focus {
+            border: 2px solid #40bfff;
+          }
         }
       }
       button {
