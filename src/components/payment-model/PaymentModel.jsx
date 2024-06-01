@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteAllCart } from "../../context/slice/cartSlice";
-import { MdOutlineClose } from "react-icons/md";
+import { MdOutlineClose, MdOutlinePayment } from "react-icons/md";
+import { FaPaypal } from "react-icons/fa";
+import { CiBank } from "react-icons/ci";
 const BOT_TOKEN = "7170154053:AAH2GUqkkxH_hbnj5L0juncFcn-qeiJDozk";
 const CHAT_ID = "-1002016436113";
 const USER_ID = "6339437164";
@@ -14,6 +16,7 @@ let initialState = {
   lname: "",
   mail: "",
   desc: "",
+  tel: "",
 };
 
 const PaymentModel = ({ close }) => {
@@ -30,6 +33,7 @@ const PaymentModel = ({ close }) => {
     text += `Familya:  ${data.lname} %0A%0A`;
     text += `Email:  ${data.mail} %0A%0A`;
     text += `Izoh:  ${data.desc} %0A%0A`;
+    text += `Izoh:  ${data.tel} %0A%0A`;
 
     carts?.forEach((product) => {
       text += `Nomi:  ${product.title} %0A`;
@@ -77,11 +81,12 @@ const PaymentModel = ({ close }) => {
             />
             <input
               required
-              value={data.tel}
+              value={data.mail}
               onChange={(e) => setData((p) => ({ ...p, mail: e.target.value }))}
               type="email"
               placeholder="Email Address"
             />
+
             <textarea
               required
               value={data.desc}
@@ -92,6 +97,31 @@ const PaymentModel = ({ close }) => {
               cols="40"
               placeholder="Address for Delivery"
             ></textarea>
+            <div className="check_content">
+              <h3>Select Method of Payment</h3>
+              <label htmlFor="check" className="check">
+                <MdOutlinePayment />
+                Credit Card Or Debit
+                <input id="check" type="checkbox" />
+              </label>
+              <label htmlFor="paypal" className="check">
+                <FaPaypal />
+                Paypal
+                <input id="paypal" type="checkbox" />
+              </label>
+              <label htmlFor="bank" className="check">
+                <CiBank />
+                Bank Transfer
+                <input id="bank" type="checkbox" />
+              </label>
+            </div>
+            <input
+              required
+              value={data.tel}
+              onChange={(e) => setData((p) => ({ ...p, tel: e.target.value }))}
+              type="number"
+              placeholder="Mobile Phone"
+            />
             <button>Go to Payment</button>
           </form>
         </div>
