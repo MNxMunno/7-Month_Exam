@@ -37,3 +37,16 @@
     background-position: 200%;
   }
 }
+
+@media only screen and (max-width: 464px) {
+  .skeleton__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .skeleton__image {
+    width: 150px;
+    height: 220px;
+    background: #ddd;
+    border-radius: 10px;
+  }
+}
