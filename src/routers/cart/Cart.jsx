@@ -7,6 +7,7 @@ import {
 } from "../../context/slice/cartSlice";
 import { TiDeleteOutline } from "react-icons/ti";
 import PaymentModel from "../../components/payment-model/PaymentModel";
+import EmptyCart from "../../components/emptyCart/EmptyCart";
 
 const Cart = () => {
   useEffect(() => {
@@ -56,7 +57,7 @@ const Cart = () => {
     <section className="shopCart">
       {model ? <PaymentModel close={closePayment} /> : <> </>}
       <div className="container">
-        <div className="cards">{card}</div>
+        <div className="cards">{data.length ? card : <EmptyCart />}</div>
         <div className="total">
           <div className="total__cards">
             <div className="card">
