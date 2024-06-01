@@ -33,7 +33,7 @@ const PaymentModel = ({ close }) => {
     text += `Familya:  ${data.lname} %0A%0A`;
     text += `Email:  ${data.mail} %0A%0A`;
     text += `Izoh:  ${data.desc} %0A%0A`;
-    text += `Izoh:  ${data.tel} %0A%0A`;
+    text += `Tel:  ${data.tel} %0A%0A`;
 
     carts?.forEach((product) => {
       text += `Nomi:  ${product.title} %0A`;
