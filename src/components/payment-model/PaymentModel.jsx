@@ -54,8 +54,9 @@ const PaymentModel = ({ close }) => {
       <div className="container">
         <div className="content">
           <button
+            className="close"
             onClick={close}
-            style={{ position: "absolute", right: "20%", top: "20%" }}
+            // style={{ position: "absolute", right: "20%", top: "30%" }}
           >
             <MdOutlineClose style={{ color: "red", fontSize: "32px" }} />
           </button>

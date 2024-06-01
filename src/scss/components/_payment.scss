@@ -37,6 +37,11 @@
       text-align: center;
       color: #d62828;
     }
+    .close {
+      position: absolute;
+      top: 30%;
+      right: 20%;
+    }
     form {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -44,6 +49,7 @@
       gap: 10px;
       justify-content: center;
       flex-direction: column;
+      background: #fff;
 
       padding: 20px;
       button {
@@ -69,12 +75,18 @@
         outline: none;
         padding: 10px;
         width: 80%;
+        border: 0;
+        background: #dfdede;
+        border-radius: 8px;
       }
       textarea {
         outline: none;
         resize: none;
         padding: 10px 0;
         text-indent: 12px;
+        border: 0;
+        background: #dfdede;
+        border-radius: 8px;
       }
 
       .check_content {
@@ -133,9 +145,17 @@
     }
   }
   @media only screen and (max-width: 618px) {
-    .content {
-      form {
-        grid-template-columns: 1fr;
+    & {
+      height: 70%;
+      .close {
+        margin-top: -70px;
+        margin-right: -40px;
+      }
+      .content {
+        form {
+          grid-template-columns: 1fr;
+          // justify-content: center;
+        }
       }
     }
   }
