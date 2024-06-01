@@ -3,15 +3,41 @@
   .content {
     display: flex;
     align-items: flex-start;
-    height: 100vh;
+    height: auto;
     gap: 32px;
     flex-wrap: wrap;
     padding-bottom: 96px;
     .img {
-      width: 50%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 40px;
+      width: 40%;
       height: 100%;
+      .text {
+        h3 {
+          font-family: Poppins;
+          font-size: 48px;
+          font-weight: 600;
+          line-height: 56.35px;
+          text-align: left;
+          color: #fff;
+          padding-bottom: 20px;
+        }
+        p {
+          font-family: Poppins;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 18.78px;
+          text-align: left;
+          color: #fff;
+          & + p {
+            padding-top: 20px;
+          }
+        }
+      }
     }
-    .form_contact {
+    .from_contact {
       display: flex;
       align-items: flex-start;
       justify-content: center;
@@ -20,26 +46,42 @@
       .form_item {
         display: flex;
         align-items: flex-start;
-        gap: 5px;
         flex-direction: column;
         label {
-          font-family: Raleway;
+          font-family: Poppins;
           font-size: 14px;
           font-weight: 500;
           line-height: 16.44px;
           text-align: left;
-          color: #373737;
+          color: #373733;
         }
         input {
-          height: 40px;
-          font-family: Raleway;
-          font-size: 16px;
+          width: 270px;
+          font-family: Poppins;
+          font-size: 14px;
           font-weight: 500;
-          line-height: 18.78px;
+          line-height: 16.44px;
           text-align: left;
           color: #969393;
+          height: 40px;
+          text-indent: 12px;
           outline: none;
+        }
+        textarea {
+          resize: none;
           padding: 10px;
+          outline: none;
+        }
+      }
+      button {
+        background: #40bfff;
+        color: #fff;
+        padding: 9px;
+        width: 100%;
+        border-radius: 8px;
+        transition: 0.3s;
+        &:hover {
+          background: #4ca6d3;
         }
       }
     }
@@ -81,6 +123,14 @@
       }
       &:active {
         background: #40bfff;
+      }
+    }
+  }
+  @media only screen and (max-width: 650px) {
+    .content {
+      .img {
+        width: 100%;
+        // height: 100%;
       }
     }
   }

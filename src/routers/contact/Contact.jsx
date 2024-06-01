@@ -50,6 +50,11 @@ const Contact = () => {
       const data = await response.json();
       if (response.ok) {
         toast.success("Message sent successfully!", {});
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
       } else {
         console.error("Response error:", data);
         toast.error(`Failed to send message: ${data.description}`, {
@@ -67,7 +72,7 @@ const Contact = () => {
       <div className="container ">
         <div className="content">
           <div className="img" style={{ background: "#40BFFF" }}>
-            <div className="tr">
+            <div className="text">
               <h3>Get in touch</h3>
               <p>contact@e-comm.ng</p>
               <p>+234 4556 6665 34</p>
@@ -108,9 +113,11 @@ const Contact = () => {
                 value={contactData.message}
                 onChange={handleChange}
                 required
+                rows={4}
+                cols={34}
               />
             </div>
-            <button type="submit">Submit</button>
+            <button>Submit</button>
           </form>
         </div>
 
